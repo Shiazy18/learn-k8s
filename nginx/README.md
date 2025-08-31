@@ -22,3 +22,5 @@ kubectl describe pod nginx-dep-6c996dc9c-82dm9 -n nginx-ns
 
 
 sudo -E kubectl port-forward service/first-app -n nginx-ns 81:80 --address=0.0.0.0
+
+kubectl set image deployment/my-deployment my-container=nginx:1.23.4

@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: site-app
+  namespace: nginx-ns
+spec:
+  selector:
+    matchLabels:
+      app: site-app
+  template:
+    metadata:
+      labels:
+        app: site-app
+    spec:
+      containers:
+      - name: site-app
+        image: shiazy/site-image
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
