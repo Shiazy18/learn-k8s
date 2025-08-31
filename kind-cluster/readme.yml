@@ -1,0 +1,6 @@
+Run the below command to create ind cluster, use the file kind-config.yml. It will create one master and 2 worker node,
+Modify according to your need
+
+```bash
+kind create cluster --config kind-config.yaml --name tws-kind-cluster
+```
