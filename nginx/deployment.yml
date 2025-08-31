@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx:latest
+        image: shiazy/game-app
         resources:
           limits:
             memory: "128Mi"

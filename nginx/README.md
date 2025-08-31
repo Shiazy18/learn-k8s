@@ -18,3 +18,7 @@ kubectl scale --replicas=5 --filename=deployment.yml -n nginx-ns
 
 
 kubectl describe pod nginx-dep-6c996dc9c-82dm9 -n nginx-ns
+
+
+
+sudo -E kubectl port-forward service/first-app -n nginx-ns 81:80 --address=0.0.0.0
