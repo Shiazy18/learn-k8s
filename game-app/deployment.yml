@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-app
+  namespace: game-app-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: game-app
+  template:
+    metadata:
+      labels:
+        app: game-app
+    spec:
+      containers:
+      - name: game-app
+        image: shiazy/game-app
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 80
